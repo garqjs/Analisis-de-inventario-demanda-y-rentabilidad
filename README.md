@@ -1,71 +1,66 @@
 # Análisis de inventario: demanda y rentabilidad
 
-## Objetivo
-Mantener un control preciso y actualizado del inventario disponible.  
+# 📦 Optimización de Inventario: Demanda y Rentabilidad
+[![Power BI](https://img.shields.io/badge/Tool-Power%20BI-yellow.svg)](https://powerbi.microsoft.com/)
+[![Supply Chain](https://img.shields.io/badge/Focus-Supply_Chain_Analytics-orange.svg)]()
 
-## Indicadores clave
-Índice de rotación de inventario. Este índice es una métrica clave en la gestión de inventarios que mide cuántas veces se ha vendido y 
-reemplazado el inventario durante un período determinado.
+## 🎯 Objetivo
+Desarrollar un sistema de control de inventarios preciso para minimizar quiebres de stock y optimizar el capital de trabajo. El proyecto integra métricas de demanda semanal y una matriz de clasificación avanzada para priorizar productos según su impacto financiero y estabilidad de ventas.
 
-Valor total del inventario en el almacén. Esta medida es crucial para entender el valor económico del inventario que tienes actualmente en existencia.
+---
 
-SKUs: calcula el número total de SKUs (Stock Keeping Units) que necesitan ser reordenados.
-
-Punto de Reorden: determina el nivel de inventario en el que se debe realizar un nuevo pedido para evitar quedarse sin existencias. El objetivo del punto de reorden es asegurar que el inventario nunca se agote y que siempre haya suficiente stock disponible para satisfacer la demanda.
-
-Inventario de Seguridad: es una cantidad adicional de inventario que se mantiene para protegerse contra incertidumbres en la demanda y en el tiempo de reabastecimiento. El objetivo del inventario de seguridad es evitar quedarse sin stock en situaciones imprevistas como fluctuaciones en la demanda o retrasos en el suministro.
-
-Demanda semanal: calcula la cantidad total de pedidos para un SKU específico en una semana dada, basada en la fecha de la semana.
-
-Flujo de pedidos (o flujo de órdenes) es el proceso completo que sigue un pedido desde el momento en que se realiza hasta que se entrega al cliente.
-
-Stock Status
-
-Debajo del punto de reorden: se refiere a una situación en la que el nivel de inventario de un producto está por debajo del punto de reorden. 
-
-Disponible: se refiere a la cantidad de unidades de un producto que están actualmente disponibles en inventario y listas para ser vendidas o utilizadas.
-
-Agotado: se refiere a la situación en la que un producto está completamente agotado y no disponible para la venta o uso en el inventario.
-
-### Clasificación ABC-XYZ
-
-La clasificación ABC-XYZ es una técnica de gestión de inventarios que combina dos métodos de clasificación para optimizar la gestión de existencias y mejorar la eficiencia operativa.
-
-_Clasificación XYZ_: evalúa la variabilidad en la demanda o el ingreso
-
-Clasificación X: productos con una demanda estable y predecible. La variabilidad es baja.
-
-Clasificación Y: productos con demanda moderadamente variable. La demanda puede ser estacional o cíclica.
-
-Clasificación Z: productos con alta variabilidad en la demanda. La demanda es errática o impredecible.
-
-_Clasificación ABC_: clasificación de los productos en relación a los ingresos.
-
-Clase A: Alta importancia. Requiere una gestión más cercana y estrategias de atención especial debido a su gran impacto en los ingresos.
-
-Clase B: Importancia moderada. Se deben gestionar de manera eficiente, pero no requieren tanta atención como los de Clase A.
-
-Clase C: Menor importancia. Se pueden gestionar con menos recursos y atención, pero aún contribuyen al total de ingresos.
-
-La distribución de ingresos anuales usando la clasificación ABC-XYZ ayuda a entender la contribución de diferentes productos a los ingresos anuales y cómo varían esos ingresos:
-
-Producto A: Clase A y Clase X (alta importancia y demanda estable).
-
-Producto B: Clase A y Clase Y (alta importancia y demanda moderadamente variable).
-
-Producto C: Clase C y Clase Z (baja importancia y demanda variable).
-
-Producto D: Clase B y Clase X (importancia moderada y demanda estable).
-
-Producto E: Clase C y Clase Y (baja importancia y demanda moderadamente variable).
-
-Producto F: Clase C y Clase Z (baja importancia y demanda altamente variable).
+## 📊 Indicadores Clave de Gestión (KPIs)
+El dashboard se centra en la salud operativa del almacén:
+* **Índice de Rotación:** Frecuencia de renovación del stock.
+* **Valorización del Almacén:** Valor económico total de las existencias actuales.
+* **Gestión de Reorden:** Cálculo automatizado de **Puntos de Reorden (ROP)** y **Stock de Seguridad** para mitigar la incertidumbre en el suministro.
+* **Alertas de Stock Status:** Clasificación visual de productos en estado *Disponible*, *Bajo Punto de Reorden* o *Agotado*.
 
 
-_Prioridades de Gestión_:
 
-Clase A y X: Productos críticos con ingresos estables. Requieren atención continua para asegurar un suministro consistente y mantener una buena relación con el cliente.
+---
 
-Clase B y Y: Productos importantes pero con demanda moderadamente variable. Necesitan una planificación ajustada y estrategias de manejo flexible.
+## 🔬 Metodología de Clasificación ABC-XYZ
+Para una gestión eficiente, implementé una matriz de doble entrada que cruza la rentabilidad con la previsibilidad de la demanda:
 
-Clase C y Z: Productos de menor importancia con alta variabilidad en la demanda. La gestión puede ser menos intensiva, pero es crucial monitorear las tendencias para ajustar la oferta.
+### 1. Clasificación ABC (Impacto en Ingresos)
+* **Clase A:** Productos críticos (Alta rentabilidad).
+* **Clase B:** Importancia moderada.
+* **Clase C:** Bajo impacto financiero.
+
+### 2. Clasificación XYZ (Variabilidad de Demanda)
+* **X (Estable):** Demanda constante y predecible.
+* **Y (Moderada):** Sujeta a estacionalidad o ciclos.
+* **Z (Errática):** Demanda impredecible, difícil de pronosticar.
+
+
+
+---
+
+## 💡 Estrategia de Priorización Logística
+Basado en el cruce de variables, el sistema segmenta los esfuerzos de gestión:
+
+| Segmento | Prioridad de Gestión | Estrategia Sugerida |
+| :--- | :--- | :--- |
+| **AX / DX** | 🔥 **Crítica** | Suministro continuo y revisión de stock diaria. |
+| **BY** | ⚖️ **Moderada** | Planificación flexible y monitoreo de ciclos estacionales. |
+| **CZ / FZ** | 🧊 **Baja** | Gestión simplificada; monitorear tendencias para evitar stock muerto. |
+
+---
+
+## 🛠️ Funcionalidades del Dashboard
+1.  **Seguimiento de Flujo de Pedidos:** Visualización del ciclo completo desde el pedido hasta la entrega.
+2.  **Cálculo de Demanda Semanal:** Análisis dinámico de pedidos por SKU para identificar tendencias de consumo.
+3.  **Monitor de SKUs a Reordenar:** Lista de acción inmediata para el departamento de compras.
+
+
+
+---
+
+## 🚀 Conclusiones de Negocio
+Este modelo de análisis permite:
+* **Reducir costos de almacenamiento** al no sobre-stockear productos de baja rotación (Clase C).
+* **Garantizar disponibilidad** de los productos "A" que generan la mayoría de los ingresos.
+* **Mitigar riesgos** mediante el cálculo dinámico del stock de seguridad frente a fluctuaciones imprevistas de la demanda.
+
+---
