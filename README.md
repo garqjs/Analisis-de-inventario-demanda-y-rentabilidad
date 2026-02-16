@@ -56,7 +56,19 @@ Basado en el cruce de variables, el sistema segmenta los esfuerzos de gestión:
 
 
 ---
+### ⚙️ Lógica de Cálculo del Modelo
+Para la clasificación XYZ, utilicé el **Coeficiente de Variación (CV)** sobre la demanda semanal:
 
+$$CV = \frac{\sigma}{\bar{x}}$$
+
+* **X (Estable):** $CV < 0.2$ (Variabilidad baja).
+* **Y (Variable):** $0.2 \leq CV \leq 0.5$ (Variabilidad moderada).
+* **Z (Errática):** $CV > 0.5$ (Variabilidad alta).
+
+**Punto de Reorden (ROP) calculado como:**
+$$ROP = (Demanda\,Promedio \times Lead\,Time) + Stock\,de\,Seguridad$$
+
+---
 ## 🚀 Conclusiones de Negocio
 Este modelo de análisis permite:
 * **Reducir costos de almacenamiento** al no sobre-stockear productos de baja rotación (Clase C).
