@@ -1,6 +1,7 @@
-# 📊 Inteligencia de Contactabilidad: Diagnóstico de Salud de ANI y Prevención de SPAM
+# 📈 Reporte de Diagnóstico e Inteligencia de Contactabilidad (Outbound)
 
-Este proyecto desarrolla un ecosistema analítico de punta a punta (End-to-End) diseñado para transformar la operación de un Contact Center de una marcación reactiva a una **estrategia preventiva basada en evidencia de datos**.
+## 🎯 Objetivo del Proyecto
+Analizar datos históricos y operativos para identificar patrones de SPAM, desgaste de ANI (Caller ID) y bajas tasas de contacto, generando un modelo predictivo que soporte recomendaciones técnicas y preventivas para optimizar la marcación saliente.
 
 Utilizando **DuckDB** para el procesamiento de alto rendimiento y **Machine Learning (XGBoost)**, el sistema detecta patrones de desgaste en las líneas telefónicas (ANIs) y predice el riesgo de bloqueo por SPAM.
 
