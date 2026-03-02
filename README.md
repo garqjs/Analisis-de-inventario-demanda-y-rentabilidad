@@ -29,7 +29,7 @@ Se implementó un modelo de clasificación para predecir la **Probabilidad de Co
 
 <img width="984" height="583" alt="image" src="https://github.com/user-attachments/assets/ae6a3e2f-8ca8-448a-acaf-6ef67d8dc09c" />
 
-<img width="865" height="558" alt="image" src="https://github.com/user-attachments/assets/52e64d95-3c49-4bea-bb2b-14d3b9af57c6" />
+<img width="865" height="558" alt="image" src="https://github.com/user-attachments/assets/d4282eec-c2ca-4058-b5f9-99f1df370191" />
 
 <img width="860" height="479" alt="image" src="https://github.com/user-attachments/assets/157f7fa9-ba84-497e-87ac-a27a4ed35ceb" />
 
